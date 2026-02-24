@@ -540,7 +540,7 @@ name = "Tasks"
 permissions = "write"
 
 [[resources]]
-type = "notes_file"
+type = "reminders_file"
 path = "/Users/stefan/notes/REMINDERS.md"
 name = "Reminders"
 """)
@@ -553,7 +553,7 @@ name = "Reminders"
         assert stefan.resources[0].name == "Projects"
         assert stefan.resources[0].permissions == "write"
         assert stefan.resources[1].type == "todo_file"
-        assert stefan.resources[2].type == "notes_file"
+        assert stefan.resources[2].type == "reminders_file"
         assert stefan.resources[2].permissions == "read"
 
     def test_load_user_with_karakeep_resource(self, tmp_path):
